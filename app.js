@@ -1,14 +1,14 @@
 // ═══ APP.JS — Dashboard interactif IA Québec ═══
 
-const BLUE = '#3B82F6';
-const BLUE_LIGHT = '#93C5FD';
+const BLUE = '#6366F1';
+const BLUE_LIGHT = '#A5B4FC';
 const ORANGE = '#F59E0B';
 const ORANGE_LIGHT = '#FCD34D';
-const GREEN = '#10B981';
-const RED = '#EF4444';
-const GRAY = '#9CA3AF';
+const GREEN = '#14B8A6';
+const RED = '#F43F5E';
+const GRAY = '#94A3B8';
 
-const PALETTE = ['#3B82F6','#F59E0B','#10B981','#EF4444','#8B5CF6','#EC4899','#14B8A6','#F97316','#6366F1','#84CC16'];
+const PALETTE = ['#6366F1','#14B8A6','#F59E0B','#F43F5E','#8B5CF6','#06B6D4','#EC4899','#10B981','#F97316','#84CC16'];
 
 Chart.defaults.font.family = "'Inter', sans-serif";
 Chart.defaults.font.size = 12;
@@ -180,7 +180,7 @@ new Chart(document.getElementById('chartCatEvolution'), {
         align: ctx => ctx.dataset.data[ctx.dataIndex] >= 0 ? 'end' : 'start',
         offset: 4,
         font: { weight: '700', size: 13 },
-        color: ctx => ctx.dataset.data[ctx.dataIndex] >= 0 ? '#065F46' : '#991B1B',
+        color: ctx => ctx.dataset.data[ctx.dataIndex] >= 0 ? '#0F766E' : '#991B1B',
         formatter: v => (v > 0 ? '+' : '') + v
       }
     },
