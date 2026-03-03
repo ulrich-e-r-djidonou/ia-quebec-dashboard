@@ -354,16 +354,39 @@ footer a:hover { text-decoration: underline; }
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(0,0,0,.15);
 }
-.author-name {
+.author-name-link {
+  display: block;
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--gray-900);
   margin-bottom: .35rem;
+  text-decoration: none;
+}
+.author-name-link:hover {
+  color: var(--blue);
 }
 .author-headline {
   font-size: .9rem;
   color: var(--gray-500);
   line-height: 1.5;
+  margin-bottom: .75rem;
+}
+.linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  color: #0A66C2;
+  font-size: .88rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: .4rem .9rem;
+  border: 1px solid #0A66C2;
+  border-radius: 20px;
+  transition: all .2s;
+}
+.linkedin-link:hover {
+  background: #0A66C2;
+  color: white;
 }
 
 /* ═══ CONTACT FORM ═══ */
