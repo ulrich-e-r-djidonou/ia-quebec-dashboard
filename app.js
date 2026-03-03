@@ -370,3 +370,33 @@ function copyLinkedin(id) {
   });
 }
 window.copyLinkedin = copyLinkedin;
+
+// ═══ CONTACT FORM ═══
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = 'Envoi en cours...';
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(contactForm)))
+      });
+      const data = await res.json();
+      if (data.success) {
+        contactForm.style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      } else {
+        btn.textContent = 'Erreur — Reessayez';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.textContent = 'Erreur — Reessayez';
+      btn.disabled = false;
+    }
+  });
+}
