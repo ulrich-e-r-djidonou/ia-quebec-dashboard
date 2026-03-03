@@ -16,6 +16,7 @@
 <header class="hero">
   <div class="hero-inner">
     <div class="hero-badge">Données Québec &middot; CC-BY 4.0</div>
+    <button class="dark-toggle" id="darkToggle" title="Mode sombre">🌙</button>
     <h1>L'IA dans l'administration publique québécoise</h1>
     <p class="hero-sub">Portrait comparatif <strong>2024 vs 2025</strong> — Analyse interactive des données ouvertes</p>
     <div class="kpi-row">
@@ -85,6 +86,36 @@
         </table>
       </div>
     </div>
+    <div class="carousel-container">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide">
+          <div class="insight-icon">🚀</div>
+          <div class="insight-title">+54% de projets en un an</div>
+          <div class="insight-text">Le gouvernement du Québec passe de 168 à 258 projets IA, une accélération sans précédent.</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="insight-icon">🤖</div>
+          <div class="insight-title">L'IA conversationnelle explose</div>
+          <div class="insight-text">68 agents conversationnels en 2025, contre 37 en 2024 — une croissance de +84%.</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="insight-icon">🏥</div>
+          <div class="insight-title">La santé entre dans l'IA</div>
+          <div class="insight-text">27 projets d'imagerie médicale apparaissent — une catégorie entièrement nouvelle.</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="insight-icon">⚙️</div>
+          <div class="insight-title">51% des projets en production</div>
+          <div class="insight-text">L'IA n'est plus expérimentale — plus de la moitié des initiatives sont opérationnelles.</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="insight-icon">🏛️</div>
+          <div class="insight-title">50 nouveaux organismes</div>
+          <div class="insight-text">Des cégeps aux CISSS de régions, l'IA se démocratise dans tout l'appareil gouvernemental.</div>
+        </div>
+      </div>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
   </section>
 
   <!-- ── CATÉGORIES ── -->
@@ -119,6 +150,7 @@
     <div class="grid-2">
       <div class="card">
         <h3>50 nouveaux organismes en 2025</h3>
+        <input type="text" class="org-search" id="orgSearch" placeholder="🔍 Rechercher un organisme...">
         <div class="new-orgs-grid" id="newOrgsList"></div>
       </div>
       <div class="card">
@@ -216,6 +248,7 @@
 <footer>
   <p>Source : <a href="https://www.donneesquebec.ca/recherche/dataset/portrait-public-des-utilisations-de-l-ia-dans-l-administration-publique-quebecoise" target="_blank">Portrait public des utilisations de l'IA dans l'administration publique québécoise</a> — Licence CC-BY 4.0 — Analyse réalisée en mars 2026</p>
   <p class="footer-credit">Réalisé par <strong>Ulrich Djidonou</strong> &amp; <strong>Claude Code</strong> (Anthropic)</p>
+  <p class="footer-updated">Dernière mise à jour : mars 2026 &middot; Source : <a href="https://www.donneesquebec.ca/recherche/dataset/portrait-public-des-utilisations-de-l-ia-dans-l-administration-publique-quebecoise" target="_blank">Données Québec</a></p>
 </footer>
 
 <div class="toast" id="toast">Texte copié !</div>
