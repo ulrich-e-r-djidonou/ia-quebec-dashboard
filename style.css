@@ -333,6 +333,25 @@ footer a:hover { text-decoration: underline; }
   color: var(--gray-700);
 }
 
+/* ═══ AUTHOR CARD ═══ */
+.author-card {
+  max-width: 600px;
+  margin: 0 auto 1.25rem;
+  text-align: center;
+  padding: 1.5rem;
+}
+.author-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: .35rem;
+}
+.author-headline {
+  font-size: .9rem;
+  color: var(--gray-500);
+  line-height: 1.5;
+}
+
 /* ═══ CONTACT FORM ═══ */
 .contact-card { max-width: 600px; margin: 0 auto; }
 .form-group { margin-bottom: 1.25rem; }
