@@ -40,6 +40,36 @@ Produit moi un rapport avec des graphiques. Ressors l'information pertinente.
 11. **"me semble que c'est pertinent de mettre ce dictionnaire"**
     → Ajout de l'onglet Méthodologie avec le dictionnaire de données officiel
 
+## Prérequis logiciels
+
+### Déjà installés sur la machine
+
+| Logiciel | Rôle | Pourquoi Claude Code en a eu besoin |
+|----------|------|-------------------------------------|
+| **Git** | Contrôle de version | Créer le dépôt, faire les commits, pousser le code vers GitHub, travailler dans un worktree isolé |
+| **Python (Anaconda)** | Traitement de données | Lire et comparer les CSV (pandas), convertir la photo en base64, modifier le HTML quand le fichier est devenu trop volumineux (~1.3 Mo) |
+| **Node.js / npm** | Exécution JavaScript côté serveur | Lancer un serveur local (`npx serve`) pour prévisualiser le site pendant le développement |
+
+### Installé par Claude Code pendant la session
+
+| Logiciel | Commande d'installation | Pourquoi |
+|----------|------------------------|----------|
+| **GitHub CLI** | `winget install --id GitHub.cli` | S'authentifier à GitHub (`gh auth login`) et créer le dépôt distant (`gh repo create`) directement depuis le terminal |
+
+### Bibliothèques via CDN (aucune installation requise)
+
+| Librairie | Rôle |
+|-----------|------|
+| **Chart.js** | Générer les 10 graphiques interactifs (barres, anneaux, barres horizontales) |
+| **chartjs-plugin-datalabels** | Afficher les étiquettes de valeurs sur les graphiques |
+| **Google Fonts (Inter)** | Typographie moderne et professionnelle sans héberger les fichiers de police |
+
+### Service externe (aucune installation requise)
+
+| Service | Rôle |
+|---------|------|
+| **Web3Forms** | Recevoir les soumissions du formulaire de contact et les envoyer par courriel, sans exposer l'adresse email dans le code source. Fonctionne sans backend — idéal pour un site statique sur GitHub Pages |
+
 ## Résultat
 
 - **Input** : 3 lignes d'instructions + itérations conversationnelles
