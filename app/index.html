@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IA au Gouvernement du Québec — 2024 vs 2025</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══ HERO ═══ -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Données Québec &middot; CC-BY 4.0</div>
+    <h1>L'IA dans l'administration publique québécoise</h1>
+    <p class="hero-sub">Portrait comparatif <strong>2024 vs 2025</strong> — Analyse interactive des données ouvertes</p>
+    <div class="kpi-row">
+      <div class="kpi">
+        <span class="kpi-value" data-count="258">0</span>
+        <span class="kpi-label">Projets IA en 2025</span>
+      </div>
+      <div class="kpi accent">
+        <span class="kpi-value">+54%</span>
+        <span class="kpi-label">Croissance annuelle</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi-value" data-count="82">0</span>
+        <span class="kpi-label">Organismes impliqués</span>
+      </div>
+      <div class="kpi accent">
+        <span class="kpi-value" data-count="50">0</span>
+        <span class="kpi-label">Nouveaux organismes</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ NAV ═══ -->
+<nav class="tabs" id="tabs">
+  <button class="tab active" data-section="overview">Vue d'ensemble</button>
+  <button class="tab" data-section="categories">Catégories</button>
+  <button class="tab" data-section="organismes">Organismes</button>
+  <button class="tab" data-section="maturite">Maturité</button>
+  <button class="tab" data-section="portefeuilles">Portefeuilles</button>
+  <button class="tab" data-section="insights">Insights LinkedIn</button>
+</nav>
+
+<!-- ═══ SECTIONS ═══ -->
+<main>
+
+  <!-- ── VUE D'ENSEMBLE ── -->
+  <section id="overview" class="section active">
+    <div class="section-header">
+      <h2>Vue d'ensemble</h2>
+      <p>Comparaison globale de l'adoption de l'IA entre 2024 et 2025</p>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Nombre total de projets IA</h3>
+        <div class="chart-wrap"><canvas id="chartTotal"></canvas></div>
+      </div>
+      <div class="card">
+        <h3>Organismes publics impliqués</h3>
+        <div class="chart-wrap"><canvas id="chartOrgs"></canvas></div>
+      </div>
+    </div>
+    <div class="card full">
+      <h3>Résumé des indicateurs clés</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Indicateur</th><th>2024</th><th>2025</th><th>Variation</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Projets IA</td><td>168</td><td>258</td><td class="up">+90 (+54%)</td></tr>
+            <tr><td>Organismes impliqués</td><td>65</td><td>82</td><td class="up">+17 (+26%)</td></tr>
+            <tr><td>Moy. projets / organisme</td><td>2,6</td><td>3,1</td><td class="up">+0,5 (+19%)</td></tr>
+            <tr><td>Projets en production</td><td>82 (49%)</td><td>132 (51%)</td><td class="up">+50 (+61%)</td></tr>
+            <tr><td>Projets en développement</td><td>81 (48%)</td><td>115 (45%)</td><td class="up">+34 (+42%)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CATÉGORIES ── -->
+  <section id="categories" class="section">
+    <div class="section-header">
+      <h2>Catégories d'IA</h2>
+      <p>Répartition et évolution des types de projets</p>
+    </div>
+    <div class="card full">
+      <h3>Comparaison par catégorie — 2024 vs 2025</h3>
+      <div class="chart-wrap chart-tall"><canvas id="chartCategories"></canvas></div>
+    </div>
+    <div class="card full">
+      <h3>Variation absolue par catégorie</h3>
+      <div class="chart-wrap chart-tall"><canvas id="chartCatEvolution"></canvas></div>
+    </div>
+    <div class="callout">
+      <strong>Fait saillant :</strong> La catégorie <em>Traitement d'image / Imagerie médicale</em> n'existait pas en 2024 et compte déjà <strong>27 projets</strong> en 2025, reflétant l'entrée massive du réseau de la santé.
+    </div>
+  </section>
+
+  <!-- ── ORGANISMES ── -->
+  <section id="organismes" class="section">
+    <div class="section-header">
+      <h2>Organismes publics</h2>
+      <p>Les acteurs les plus actifs et les nouveaux entrants</p>
+    </div>
+    <div class="card full">
+      <h3>Top 10 des organismes les plus actifs en IA (2025)</h3>
+      <div class="chart-wrap chart-tall"><canvas id="chartTopOrgs"></canvas></div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>50 nouveaux organismes en 2025</h3>
+        <div class="new-orgs-grid" id="newOrgsList"></div>
+      </div>
+      <div class="card">
+        <h3>Répartition sectorielle des nouveaux entrants</h3>
+        <div class="chart-wrap"><canvas id="chartNewOrgsSector"></canvas></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MATURITÉ ── -->
+  <section id="maturite" class="section">
+    <div class="section-header">
+      <h2>Maturité des projets</h2>
+      <p>Production vs développement : l'IA passe du labo au terrain</p>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Statuts 2024</h3>
+        <div class="chart-wrap"><canvas id="chartStatut24"></canvas></div>
+      </div>
+      <div class="card">
+        <h3>Statuts 2025</h3>
+        <div class="chart-wrap"><canvas id="chartStatut25"></canvas></div>
+      </div>
+    </div>
+    <div class="card full">
+      <h3>Production vs Développement — Comparaison</h3>
+      <div class="chart-wrap"><canvas id="chartProdVsDev"></canvas></div>
+    </div>
+    <div class="callout">
+      <strong>Conclusion :</strong> Malgré l'afflux massif de nouveaux projets, le taux de maturité se maintient — <strong>51% en production</strong>. L'IA n'est plus un projet pilote dans l'administration québécoise.
+    </div>
+  </section>
+
+  <!-- ── PORTEFEUILLES ── -->
+  <section id="portefeuilles" class="section">
+    <div class="section-header">
+      <h2>Portefeuilles ministériels</h2>
+      <p>Quels ministères mènent la transformation IA ?</p>
+    </div>
+    <div class="card full">
+      <h3>Projets IA par portefeuille — 2024 vs 2025</h3>
+      <div class="chart-wrap chart-xtall"><canvas id="chartPortefeuilles"></canvas></div>
+    </div>
+  </section>
+
+  <!-- ── INSIGHTS LINKEDIN ── -->
+  <section id="insights" class="section">
+    <div class="section-header">
+      <h2>Insights pour LinkedIn</h2>
+      <p>Contenu prêt à publier pour un économiste influenceur</p>
+    </div>
+
+    <div class="linkedin-cards">
+      <div class="card linkedin-card">
+        <div class="linkedin-header">
+          <span class="linkedin-badge">Post long</span>
+          <button class="copy-btn" onclick="copyLinkedin('post-long')">Copier le texte</button>
+        </div>
+        <div class="linkedin-content" id="post-long">L'IA au gouvernement du Québec : les chiffres 2025 sont tombés. Et ils sont impressionnants.
+
+Je viens d'analyser les données ouvertes du gouvernement du Québec sur l'adoption de l'IA dans l'administration publique.
+
+258 projets IA sont maintenant recensés, contre 168 l'an dernier. C'est une croissance de 54% en un an.
+
+Mais le plus intéressant, ce n'est pas juste le volume. C'est ce que ça révèle :
+
+1. L'effet IA générative est réel
+Les agents conversationnels passent de 37 à 68 projets (+84%). Le gouvernement n'est pas en reste face au secteur privé.
+
+2. La santé accélère
+27 projets en imagerie médicale — une catégorie qui n'existait pas l'an dernier. 15+ établissements de santé entrent dans le portrait pour la première fois.
+
+3. 51% des projets sont en production
+On ne parle plus de projets pilotes. Plus de la moitié des initiatives IA sont opérationnelles.
+
+4. 50 nouveaux organismes
+Des cégeps. Des CISSS de régions. Le Bureau du coroner. La SÉPAQ. L'IA se démocratise bien au-delà des grands ministères.
+
+5. Le MRNF domine avec 26 projets
+Forêts, géomatique, ressources naturelles : le Québec mise sur l'IA là où il a un avantage comparatif en données.
+
+La vraie question : est-ce que ces investissements se traduisent en gains de productivité mesurables pour les citoyens?
+
+Source : Données Québec (CC-BY 4.0)
+
+#IA #IntelligenceArtificielle #Québec #TransformationNumérique #SecteurPublic #Innovation #Économie</div>
+      </div>
+
+      <div class="card linkedin-card">
+        <div class="linkedin-header">
+          <span class="linkedin-badge short">Post court</span>
+          <button class="copy-btn" onclick="copyLinkedin('post-court')">Copier le texte</button>
+        </div>
+        <div class="linkedin-content" id="post-court">L'IA dans le gouvernement du Québec en 2025 :
+
+258 projets (+54% vs 2024)
+82 organismes impliqués (+26%)
+132 projets déjà en production
+50 nouveaux organismes entrent dans le portrait
+
+Le chiffre qui m'a le plus frappé :
+68 projets d'IA conversationnelle, contre 37 l'an dernier.
+
+L'État québécois n'est plus en mode exploration. Il est en mode déploiement.
+
+Source : Données Québec (CC-BY 4.0)
+
+#IA #Québec #SecteurPublic #Innovation</div>
+      </div>
+
+      <div class="card linkedin-card">
+        <div class="linkedin-header">
+          <span class="linkedin-badge carrousel">Carrousel (5 slides)</span>
+          <button class="copy-btn" onclick="copyLinkedin('post-carrousel')">Copier le texte</button>
+        </div>
+        <div class="linkedin-content" id="post-carrousel">Slide 1 — Accroche
+L'IA au gouvernement du Québec : +54% de projets en un an
+258 projets | 82 organismes | Données 2025
+
+Slide 2 — La croissance
+168 projets en 2024 → 258 en 2025
+65 organismes → 82 organismes
++50 NOUVEAUX organismes déclarent des projets IA
+
+Slide 3 — Ce qui explose
+Agents conversationnels : +84% (37 → 68)
+Imagerie médicale : 0 → 27 (nouveau!)
+Automatisation : +71% (21 → 36)
+
+Slide 4 — La maturité
+51% des projets sont EN PRODUCTION
+132 projets opérationnels
+115 en développement = pipeline solide
+
+Slide 5 — Le signal
+L'IA au gouvernement, ce n'est plus un projet pilote.
+C'est une réalité opérationnelle qui transforme
+la santé, les transports, les forêts et les services aux citoyens.</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Conseils :</strong> Publiez le mardi ou mercredi entre 8h-10h. Le format carrousel obtient le meilleur engagement sur LinkedIn. Joignez les graphiques interactifs en capture d'écran.
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Source : <a href="https://www.donneesquebec.ca/recherche/dataset/portrait-public-des-utilisations-de-l-ia-dans-l-administration-publique-quebecoise" target="_blank">Portrait public des utilisations de l'IA dans l'administration publique québécoise</a> — Licence CC-BY 4.0 — Analyse réalisée en mars 2026</p>
+</footer>
+
+<div class="toast" id="toast">Texte copié !</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
