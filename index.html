@@ -47,6 +47,7 @@
   <button class="tab" data-section="organismes">Organismes</button>
   <button class="tab" data-section="maturite">Maturité</button>
   <button class="tab" data-section="portefeuilles">Portefeuilles</button>
+  <button class="tab" data-section="methodologie">Méthodologie</button>
   <button class="tab" data-section="contact">Contact</button>
 </nav>
 
@@ -194,6 +195,102 @@
     <div class="card full">
       <h3>Projets IA par portefeuille — 2024 vs 2025</h3>
       <div class="chart-wrap chart-xtall"><canvas id="chartPortefeuilles"></canvas></div>
+    </div>
+  </section>
+
+  <!-- ── MÉTHODOLOGIE ── -->
+  <section id="methodologie" class="section">
+    <div class="section-header">
+      <h2>Méthodologie &amp; Dictionnaire de données</h2>
+      <p>Comprendre les données du Portrait public de l'IA dans l'administration publique québécoise</p>
+    </div>
+
+    <div class="card full">
+      <h3>Description des données</h3>
+      <p class="dict-intro">Les données contiennent le nom de l'actif informatique, du projet ou de l'initiative en IA, sa catégorie, l'organisme public responsable, le portefeuille ministériel auquel l'organisme est rattaché, les bénéfices associés ainsi que son statut.</p>
+    </div>
+
+    <div class="card full">
+      <h3>Catégories d'IA</h3>
+      <div class="dict-grid">
+
+        <div class="dict-item">
+          <div class="dict-label">Aide à la décision, planification et/ou prédiction</div>
+          <div class="dict-desc">Système d'IA utilisé principalement comme outil d'aide à la décision, à la planification ou pour faire des prédictions.</div>
+        </div>
+
+        <div class="dict-item">
+          <div class="dict-label">Analyse des comportements / sentiments</div>
+          <div class="dict-desc">Système d'IA utilisé principalement pour faire de l'analyse de comportement ou pour l'analyse de sentiments.</div>
+        </div>
+
+        <div class="dict-item">
+          <div class="dict-label">Assistant / agent conversationnel</div>
+          <div class="dict-desc">Système d'IA utilisant la communication en langage naturel et principalement utilisé pour l'assistance à des tâches spécifiques ou pour maintenir une conversation avec un utilisateur.</div>
+        </div>
+
+        <div class="dict-item">
+          <div class="dict-label">Automatisation</div>
+          <div class="dict-desc">Système d'IA utilisé principalement pour l'automatisation de tâches et/ou de processus définis et ciblés.</div>
+        </div>
+
+        <div class="dict-item">
+          <div class="dict-label">Expérience utilisateur — Personnalisation</div>
+          <div class="dict-desc">Système d'IA utilisé principalement pour l'amélioration de l'expérience utilisateur sur des plateformes ou des sites web (ex. : faciliter les recherches, personnaliser le contenu).</div>
+        </div>
+
+        <div class="dict-item">
+          <div class="dict-label">Formation et apprentissage assisté par l'IA</div>
+          <div class="dict-desc">Système d'IA utilisé principalement dans le cadre de formation et dans l'assistance à l'apprentissage.</div>
+        </div>
+
+        <div class="dict-item">
+          <div class="dict-label">Gestion géomatique et géospatiale</div>
+          <div class="dict-desc">Système d'IA utilisé pour la gestion forestière, géologique, cartographique et la géomatique.</div>
+        </div>
+
+        <div class="dict-item">
+          <div class="dict-label">Laboratoire et équipement</div>
+          <div class="dict-desc">Initiative ou projet visant la mise en place d'un laboratoire d'expérimentation et/ou l'acquisition d'équipements informatiques dédiés au développement de l'IA.</div>
+        </div>
+
+        <div class="dict-item">
+          <div class="dict-label">Système électronique connecté et intelligence ambiante</div>
+          <div class="dict-desc">Système d'IA intégré à des initiatives ou projet visant la mise en œuvre d'un système électronique intelligent, de l'intelligence ambiante ou d'objets connectés.</div>
+        </div>
+
+        <div class="dict-item">
+          <div class="dict-label">Traitement d'image</div>
+          <div class="dict-desc">Système d'IA utilisé principalement pour le traitement et l'analyse d'image.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card full">
+      <h3>Statuts des projets</h3>
+      <div class="dict-grid">
+
+        <div class="dict-item">
+          <div class="dict-label"><span class="status-dot dev"></span>Développement de la solution</div>
+          <div class="dict-desc">Ce statut englobe les projets ou initiatives qui sont au stade de développement/acquisition ou en phase de test et validation du cycle de développement d'un système d'IA.</div>
+        </div>
+
+        <div class="dict-item">
+          <div class="dict-label"><span class="status-dot prod"></span>Solution en production</div>
+          <div class="dict-desc">Ce statut englobe les projets ou initiatives qui sont à l'étape de déploiement/intégration ou de maintien et support du cycle de développement d'un système d'IA.</div>
+        </div>
+
+        <div class="dict-item">
+          <div class="dict-label"><span class="status-dot na"></span>Information indisponible</div>
+          <div class="dict-desc">Ce statut indique que l'information n'a pu être confirmée par l'organisme responsable du projet ou de l'initiative.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Source :</strong> Portrait public des utilisations de l'IA dans l'administration publique québécoise — <a href="https://www.donneesquebec.ca/recherche/dataset/portrait-public-des-utilisations-de-l-ia-dans-l-administration-publique-quebecoise" target="_blank">Données Québec</a> — Licence CC-BY 4.0
     </div>
   </section>
 

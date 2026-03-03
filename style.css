@@ -612,6 +612,56 @@ body.dark .carousel-slide { background: #1E293B; border-color: #334155; }
   box-shadow: 0 0 0 3px rgba(99,102,241,.15);
 }
 
+/* ═══ DATA DICTIONARY ═══ */
+.dict-intro {
+  font-size: .95rem;
+  color: var(--gray-700);
+  line-height: 1.7;
+}
+.dict-grid {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+.dict-item {
+  padding: 1rem 1.25rem;
+  background: var(--gray-50);
+  border-radius: 10px;
+  border-left: 3px solid var(--blue);
+  transition: all .2s;
+}
+.dict-item:hover {
+  border-left-color: var(--accent);
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+.dict-label {
+  font-weight: 700;
+  font-size: .92rem;
+  color: var(--gray-900);
+  margin-bottom: .3rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.dict-desc {
+  font-size: .88rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+}
+.status-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.status-dot.prod { background: var(--teal); }
+.status-dot.dev { background: var(--orange); }
+.status-dot.na { background: var(--gray-300); }
+
+body.dark .dict-item { background: #334155; }
+body.dark .dict-item:hover { box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+
 /* ═══ FOOTER UPDATED ═══ */
 .footer-updated {
   margin-top: .3rem;
