@@ -374,19 +374,25 @@ footer a:hover { text-decoration: underline; }
 .linkedin-link {
   display: inline-flex;
   align-items: center;
-  gap: .4rem;
+  gap: .45rem;
   color: #0A66C2;
   font-size: .88rem;
   font-weight: 600;
   text-decoration: none;
-  padding: .4rem .9rem;
-  border: 1px solid #0A66C2;
+  padding: .45rem 1rem;
+  border: 2px solid #0A66C2;
   border-radius: 20px;
   transition: all .2s;
+}
+.linkedin-link img {
+  filter: brightness(0) saturate(100%) invert(26%) sepia(89%) saturate(1583%) hue-rotate(190deg) brightness(96%) contrast(101%);
 }
 .linkedin-link:hover {
   background: #0A66C2;
   color: white;
+}
+.linkedin-link:hover img {
+  filter: brightness(0) invert(1);
 }
 
 /* ═══ CONTACT FORM ═══ */
