@@ -463,6 +463,29 @@ footer a:hover { text-decoration: underline; }
 .form-success p { color: var(--gray-500); }
 
 /* ═══ DARK MODE TOGGLE ═══ */
+.lang-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 4rem;
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: .85rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all .3s;
+  backdrop-filter: blur(4px);
+  z-index: 10;
+  letter-spacing: .5px;
+}
+.lang-toggle:hover {
+  background: rgba(255,255,255,.25);
+  transform: scale(1.05);
+}
+
 .dark-toggle {
   position: absolute;
   top: 1rem;
