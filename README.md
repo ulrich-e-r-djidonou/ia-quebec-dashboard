@@ -2,7 +2,7 @@
 
 Dashboard interactif analysant l'adoption de l'intelligence artificielle dans l'administration publique quebecoise.
 
-**[Voir le dashboard en ligne](https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/)**
+**[Voir le dashboard en ligne (FR)](https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/)** | **[View the dashboard (EN)](https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/en/)**
 
 ---
 
@@ -12,7 +12,7 @@ Dashboard interactif analysant l'adoption de l'intelligence artificielle dans l'
 |---|---|---|---|
 | Projets IA | 168 | 258 | **+54%** |
 | Organismes impliques | 65 | 82 | **+26%** |
-| Nouveaux organismes | - | 50 | - |
+| Nouveaux organismes | - | 58 | - |
 | Projets en production | 82 | 132 | **+61%** |
 | Agents conversationnels | 37 | 68 | **+84%** |
 
@@ -20,7 +20,7 @@ Dashboard interactif analysant l'adoption de l'intelligence artificielle dans l'
 
 - **Vue d'ensemble** : KPIs animes, graphiques comparatifs, tableau recapitulatif
 - **Categories d'IA** : Repartition et evolution par type de projet (aide a la decision, automatisation, IA conversationnelle, imagerie medicale...)
-- **Organismes** : Top 10 des acteurs les plus actifs, liste des 50 nouveaux entrants, analyse sectorielle
+- **Organismes** : Top 10 des acteurs les plus actifs, liste des 58 nouveaux entrants, analyse sectorielle
 - **Maturite** : Production vs developpement, evolution du taux de deploiement
 - **Portefeuilles ministeriels** : Comparaison par ministere
 
