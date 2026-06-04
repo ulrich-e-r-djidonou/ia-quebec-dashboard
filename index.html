@@ -4,6 +4,118 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IA au Gouvernement du Québec — 2024 vs 2025</title>
+  <meta name="description" content="Dashboard interactif sur l'adoption de l'intelligence artificielle dans l'administration publique québécoise. Portrait comparatif 2024 vs 2025 à partir des données ouvertes du Québec.">
+  <meta name="author" content="Ulrich Djidonou">
+  <meta name="keywords" content="intelligence artificielle, IA, administration publique, Québec, gouvernement du Québec, données ouvertes, adoption IA, secteur public, dashboard, 2024, 2025">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/">
+  <link rel="alternate" hreflang="fr" href="https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/">
+  <link rel="alternate" hreflang="en" href="https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/en/">
+  <link rel="alternate" hreflang="x-default" href="https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/">
+  <meta property="og:site_name" content="IA au Gouvernement du Québec">
+  <meta property="og:title" content="IA au Gouvernement du Québec — 2024 vs 2025">
+  <meta property="og:description" content="Portrait comparatif 2024 vs 2025 de l'adoption de l'IA dans l'administration publique québécoise, à partir des données ouvertes du Québec.">
+  <meta property="og:locale" content="fr_CA">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IA au Gouvernement du Québec — 2024 vs 2025">
+  <meta name="twitter:description" content="Adoption de l'IA dans l'administration publique québécoise : portrait comparatif 2024 vs 2025.">
+  <meta name="twitter:creator" content="@ulrichdjidonou">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/#website",
+        "url": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/",
+        "name": "IA au Gouvernement du Québec",
+        "description": "Dashboard interactif sur l'adoption de l'IA dans l'administration publique québécoise.",
+        "inLanguage": ["fr", "en"],
+        "author": { "@id": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/#author" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/#author",
+        "name": "Ulrich Djidonou",
+        "url": "https://github.com/ulrich-e-r-djidonou",
+        "jobTitle": "Économiste",
+        "description": "Économiste spécialisé en inférence causale et machine learning, basé au Québec.",
+        "sameAs": [
+          "https://www.linkedin.com/in/ulrich-djidonou/",
+          "https://github.com/ulrich-e-r-djidonou"
+        ]
+      },
+      {
+        "@type": "Dataset",
+        "@id": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/#dataset",
+        "name": "Adoption de l'IA dans l'administration publique québécoise (2024 vs 2025)",
+        "description": "Indicateurs sur les projets et l'adoption de l'intelligence artificielle dans l'administration publique du Québec, comparant 2024 et 2025, à partir des données ouvertes du gouvernement du Québec (CC-BY 4.0).",
+        "url": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/",
+        "creator": { "@id": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/#author" },
+        "temporalCoverage": "2024/2025",
+        "spatialCoverage": { "@type": "AdministrativeArea", "name": "Québec, Canada" },
+        "isBasedOn": "https://www.donneesquebec.ca/",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "keywords": ["intelligence artificielle", "administration publique", "Québec", "données ouvertes", "secteur public", "adoption IA"],
+        "inLanguage": ["fr", "en"],
+        "variableMeasured": [
+          { "@type": "PropertyValue", "name": "Nombre de projets IA" },
+          { "@type": "PropertyValue", "name": "Croissance annuelle", "unitCode": "P1" },
+          { "@type": "PropertyValue", "name": "Répartition par ministère / organisme" }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/#webpage",
+        "url": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/",
+        "name": "IA au Gouvernement du Québec — 2024 vs 2025",
+        "isPartOf": { "@id": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/#website" },
+        "about": { "@id": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/#dataset" },
+        "author": { "@id": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/#author" },
+        "inLanguage": "fr"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Qu'est-ce que ce dashboard sur l'IA dans l'administration publique québécoise ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "C'est un tableau de bord interactif créé par l'économiste Ulrich Djidonou qui présente un portrait comparatif 2024 vs 2025 de l'adoption de l'intelligence artificielle dans l'administration publique du Québec, à partir des données ouvertes du gouvernement du Québec."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quelles sont les sources de données ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Les données proviennent du portail Données Québec (donneesquebec.ca), sous licence CC-BY 4.0, et couvrent les projets d'IA recensés dans l'administration publique québécoise en 2024 et 2025."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does this Quebec government AI dashboard show?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It is an interactive dashboard by economist Ulrich Djidonou presenting a 2024 vs 2025 comparison of artificial intelligence adoption in Quebec's public administration, based on the Government of Quebec open data (CC-BY 4.0)."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
