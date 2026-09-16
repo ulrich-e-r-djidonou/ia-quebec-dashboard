@@ -3,19 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.web3forms.com https://ia-quebec.goatcounter.com; form-action 'self' https://api.web3forms.com; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>IA au Gouvernement du Québec — 2024 vs 2025</title>
   <meta name="description" content="Dashboard interactif sur l'adoption de l'intelligence artificielle dans l'administration publique québécoise. Portrait comparatif 2024 vs 2025 à partir des données ouvertes du Québec.">
   <meta name="author" content="Ulrich Djidonou">
   <meta name="keywords" content="intelligence artificielle, IA, administration publique, Québec, gouvernement du Québec, données ouvertes, adoption IA, secteur public, dashboard, 2024, 2025">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/">
-  <link rel="alternate" hreflang="fr" href="https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/">
-  <link rel="alternate" hreflang="en" href="https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/en/">
-  <link rel="alternate" hreflang="x-default" href="https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/">
+  <link rel="canonical" href="https://djidonou.com/ia-quebec-dashboard/">
+  <link rel="alternate" hreflang="fr" href="https://djidonou.com/ia-quebec-dashboard/">
+  <link rel="alternate" hreflang="en" href="https://djidonou.com/ia-quebec-dashboard/en/">
+  <link rel="alternate" hreflang="x-default" href="https://djidonou.com/ia-quebec-dashboard/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/">
+  <meta property="og:url" content="https://djidonou.com/ia-quebec-dashboard/">
   <meta property="og:site_name" content="IA au Gouvernement du Québec">
   <meta property="og:title" content="IA au Gouvernement du Québec — 2024 vs 2025">
   <meta property="og:description" content="Portrait comparatif 2024 vs 2025 de l'adoption de l'IA dans l'administration publique québécoise, à partir des données ouvertes du Québec.">
@@ -35,16 +37,16 @@
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/#website",
-        "url": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/",
+        "@id": "https://djidonou.com/ia-quebec-dashboard/#website",
+        "url": "https://djidonou.com/ia-quebec-dashboard/",
         "name": "IA au Gouvernement du Québec",
         "description": "Dashboard interactif sur l'adoption de l'IA dans l'administration publique québécoise.",
         "inLanguage": ["fr", "en"],
-        "author": { "@id": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/#author" }
+        "author": { "@id": "https://djidonou.com/ia-quebec-dashboard/#author" }
       },
       {
         "@type": "Person",
-        "@id": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/#author",
+        "@id": "https://djidonou.com/ia-quebec-dashboard/#author",
         "name": "Ulrich Djidonou",
         "url": "https://github.com/ulrich-e-r-djidonou",
         "jobTitle": "Économiste",
@@ -56,11 +58,11 @@
       },
       {
         "@type": "Dataset",
-        "@id": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/#dataset",
+        "@id": "https://djidonou.com/ia-quebec-dashboard/#dataset",
         "name": "Adoption de l'IA dans l'administration publique québécoise (2024 vs 2025)",
         "description": "Indicateurs sur les projets et l'adoption de l'intelligence artificielle dans l'administration publique du Québec, comparant 2024 et 2025, à partir des données ouvertes du gouvernement du Québec (CC-BY 4.0).",
-        "url": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/",
-        "creator": { "@id": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/#author" },
+        "url": "https://djidonou.com/ia-quebec-dashboard/",
+        "creator": { "@id": "https://djidonou.com/ia-quebec-dashboard/#author" },
         "temporalCoverage": "2024/2025",
         "spatialCoverage": { "@type": "AdministrativeArea", "name": "Québec, Canada" },
         "isBasedOn": "https://www.donneesquebec.ca/",
@@ -75,17 +77,17 @@
       },
       {
         "@type": "WebPage",
-        "@id": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/#webpage",
-        "url": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/",
+        "@id": "https://djidonou.com/ia-quebec-dashboard/#webpage",
+        "url": "https://djidonou.com/ia-quebec-dashboard/",
         "name": "IA au Gouvernement du Québec — 2024 vs 2025",
-        "isPartOf": { "@id": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/#website" },
-        "about": { "@id": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/#dataset" },
-        "author": { "@id": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/#author" },
+        "isPartOf": { "@id": "https://djidonou.com/ia-quebec-dashboard/#website" },
+        "about": { "@id": "https://djidonou.com/ia-quebec-dashboard/#dataset" },
+        "author": { "@id": "https://djidonou.com/ia-quebec-dashboard/#author" },
         "inLanguage": "fr"
       },
       {
         "@type": "FAQPage",
-        "@id": "https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/#faq",
+        "@id": "https://djidonou.com/ia-quebec-dashboard/#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -116,8 +118,8 @@
     ]
   }
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" integrity="sha384-vsrfeLOOY6KuIYKDlmVH5UiBmgIdB1oEf7p01YgWHuqmOHfZr374+odEv96n9tNC" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js" integrity="sha384-y49Zu59jZHJL/PLKgZPv3k2WI9c0Yp3pWB76V8OBVCb0QBKS8l4Ff3YslzHVX76Y" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -259,7 +261,7 @@
     </div>
 
     <div class="callout">
-      <strong>Source :</strong> Portrait public des utilisations de l'IA dans l'administration publique québécoise — <a href="https://www.donneesquebec.ca/recherche/dataset/portrait-public-des-utilisations-de-l-ia-dans-l-administration-publique-quebecoise" target="_blank">Données Québec</a> — Licence CC-BY 4.0
+      <strong>Source :</strong> Portrait public des utilisations de l'IA dans l'administration publique québécoise — <a href="https://www.donneesquebec.ca/recherche/dataset/portrait-public-des-utilisations-de-l-ia-dans-l-administration-publique-quebecoise" target="_blank" rel="noopener noreferrer">Données Québec</a> — Licence CC-BY 4.0
     </div>
   </section>
 
@@ -457,7 +459,7 @@
 </main>
 
 <footer>
-  <p>Source : <a href="https://www.donneesquebec.ca/recherche/dataset/portrait-public-des-utilisations-de-l-ia-dans-l-administration-publique-quebecoise" target="_blank">Portrait public des utilisations de l'IA dans l'administration publique québécoise</a> (Données Québec) — Licence CC-BY 4.0 — Dernière mise à jour : mars 2026</p>
+  <p>Source : <a href="https://www.donneesquebec.ca/recherche/dataset/portrait-public-des-utilisations-de-l-ia-dans-l-administration-publique-quebecoise" target="_blank" rel="noopener noreferrer">Portrait public des utilisations de l'IA dans l'administration publique québécoise</a> (Données Québec) — Licence CC-BY 4.0 — Dernière mise à jour : mars 2026</p>
   <p class="footer-credit">Réalisé par <strong>Ulrich Djidonou</strong>, avec l'assistance d'outils d'IA</p>
 </footer>
 
@@ -465,6 +467,6 @@
 
 <script src="data.js"></script>
 <script src="app.js"></script>
-<script data-goatcounter="https://ia-quebec.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://ia-quebec.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>

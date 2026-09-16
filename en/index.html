@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.web3forms.com https://ia-quebec.goatcounter.com; form-action 'self' https://api.web3forms.com; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>AI in Quebec Government — 2024 vs 2025</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" integrity="sha384-vsrfeLOOY6KuIYKDlmVH5UiBmgIdB1oEf7p01YgWHuqmOHfZr374+odEv96n9tNC" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js" integrity="sha384-y49Zu59jZHJL/PLKgZPv3k2WI9c0Yp3pWB76V8OBVCb0QBKS8l4Ff3YslzHVX76Y" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
@@ -147,7 +149,7 @@
     </div>
 
     <div class="callout">
-      <strong>Source:</strong> Public Portrait of AI Use in Quebec's Public Administration — <a href="https://www.donneesquebec.ca/recherche/dataset/portrait-public-des-utilisations-de-l-ia-dans-l-administration-publique-quebecoise" target="_blank">Données Québec</a> — CC-BY 4.0 License
+      <strong>Source:</strong> Public Portrait of AI Use in Quebec's Public Administration — <a href="https://www.donneesquebec.ca/recherche/dataset/portrait-public-des-utilisations-de-l-ia-dans-l-administration-publique-quebecoise" target="_blank" rel="noopener noreferrer">Données Québec</a> — CC-BY 4.0 License
     </div>
   </section>
 
@@ -345,7 +347,7 @@
 </main>
 
 <footer>
-  <p>Source: <a href="https://www.donneesquebec.ca/recherche/dataset/portrait-public-des-utilisations-de-l-ia-dans-l-administration-publique-quebecoise" target="_blank">Public Portrait of AI Use in Quebec's Public Administration</a> (Données Québec) — CC-BY 4.0 License — Last updated: March 2026</p>
+  <p>Source: <a href="https://www.donneesquebec.ca/recherche/dataset/portrait-public-des-utilisations-de-l-ia-dans-l-administration-publique-quebecoise" target="_blank" rel="noopener noreferrer">Public Portrait of AI Use in Quebec's Public Administration</a> (Données Québec) — CC-BY 4.0 License — Last updated: March 2026</p>
   <p class="footer-credit">Built by <strong>Ulrich Djidonou</strong>, with the assistance of AI tools</p>
 </footer>
 
@@ -353,6 +355,6 @@
 
 <script src="data.js"></script>
 <script src="app.js"></script>
-<script data-goatcounter="https://ia-quebec.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://ia-quebec.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
