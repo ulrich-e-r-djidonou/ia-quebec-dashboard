@@ -407,12 +407,16 @@ const darkToggle = document.getElementById('darkToggle');
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'dark') {
   document.body.classList.add('dark');
-  darkToggle.textContent = '☀️';
+  darkToggle.innerHTML = `<svg class="icone-theme" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>`;
+  darkToggle.setAttribute('aria-pressed', 'true');
+  darkToggle.setAttribute('aria-label', 'Revenir au mode clair');
 }
 darkToggle.addEventListener('click', () => {
   document.body.classList.toggle('dark');
   const isDark = document.body.classList.contains('dark');
-  darkToggle.textContent = isDark ? '☀️' : '🌙';
+  darkToggle.innerHTML = isDark ? `<svg class="icone-theme" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>` : `<svg class="icone-theme" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>`;
+  darkToggle.setAttribute('aria-pressed', String(isDark));
+  darkToggle.setAttribute('aria-label', isDark ? 'Revenir au mode clair' : 'Basculer en mode sombre');
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
 

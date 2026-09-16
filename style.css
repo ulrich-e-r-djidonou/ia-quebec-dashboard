@@ -10,6 +10,14 @@
   --red: #F43F5E;
   --accent: #8B5CF6;
   --teal: #14B8A6;
+  /* Variantes reservees au texte et aux fonds portant du blanc.
+     Mesures sur --gray-50 (#F8FAFC) : blue-text 7.55:1, green-text 5.12:1,
+     orange-text 5.02:1 en fond. Les teintes claires ci-dessus restent aux
+     remplissages de graphiques, ou le contraste de texte ne s'applique pas. */
+  --blue-text: #4338CA;
+  --green-text: #0E7490;
+  --green-fill: #0E7490;
+  --orange-fill: #B45309;  /* fonds clairs uniquement */
   --gray-50: #F8FAFC;
   --gray-100: #F1F5F9;
   --gray-200: #E2E8F0;
@@ -64,13 +72,11 @@ body {
   font-weight: 800;
   line-height: 1.15;
   margin-bottom: .6rem;
-  background: linear-gradient(135deg, #fff 40%, #A5B4FC 70%, #5EEAD4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #fff;
+  text-wrap: balance;
 }
 .hero-sub { color: rgba(255,255,255,.7); font-size: 1.05rem; margin-bottom: 2rem; }
-.hero-sub strong { color: var(--orange); }
+.hero-sub strong { color: #FCD34D; }  /* 6.6:1 sur le teal du hero, 11:1 sur l'indigo */
 
 /* ── KPI Row ── */
 .kpi-row {
@@ -96,11 +102,11 @@ body {
   font-weight: 800;
   line-height: 1.1;
 }
-.kpi.accent .kpi-value { color: var(--orange); }
+.kpi.accent .kpi-value { color: #FCD34D; }  /* le bloc KPI est pose sur le hero sombre, pas sur fond clair */
 .kpi-label {
   display: block;
   font-size: .78rem;
-  color: rgba(255,255,255,.6);
+  color: rgba(255,255,255,.78);  /* .6 tombait sous 4.5:1 sur le hero */
   margin-top: .25rem;
 }
 
@@ -134,8 +140,8 @@ body {
 }
 .tab:hover { color: var(--gray-800); }
 .tab.active {
-  color: var(--blue);
-  border-bottom-color: var(--blue);
+  color: var(--blue-text);
+  border-bottom-color: var(--blue-text);
   font-weight: 600;
 }
 
@@ -201,14 +207,14 @@ td {
   border-bottom: 1px solid var(--gray-100);
 }
 tr:hover td { background: var(--gray-50); }
-.up { color: var(--green); font-weight: 600; }
+.up { color: var(--green-text); font-weight: 600; }
 .down { color: var(--red); font-weight: 600; }
 
 /* ═══ CALLOUT ═══ */
 .callout {
-  background: linear-gradient(135deg, #EEF2FF, #F0FDFA);
-  border-left: 4px solid var(--blue);
-  border-radius: 0 var(--radius) var(--radius) 0;
+  background: #EEF2FF;
+  border: 1px solid #C7D2FE;
+  border-radius: var(--radius);
   padding: 1rem 1.25rem;
   margin: 1.25rem 0;
   font-size: .92rem;
@@ -255,7 +261,7 @@ tr:hover td { background: var(--gray-50); }
 }
 .linkedin-badge {
   display: inline-block;
-  background: var(--blue);
+  background: var(--blue-text);
   color: white;
   border-radius: 6px;
   padding: .2rem .7rem;
@@ -264,8 +270,8 @@ tr:hover td { background: var(--gray-50); }
   text-transform: uppercase;
   letter-spacing: .03em;
 }
-.linkedin-badge.short { background: var(--green); }
-.linkedin-badge.carrousel { background: var(--orange-dark); }
+.linkedin-badge.short { background: var(--green-fill); }
+.linkedin-badge.carrousel { background: var(--orange-fill); }
 .copy-btn {
   border: 1px solid var(--gray-300);
   background: white;
@@ -279,9 +285,9 @@ tr:hover td { background: var(--gray-50); }
   font-family: inherit;
 }
 .copy-btn:hover {
-  background: var(--blue);
+  background: var(--blue-text);
   color: white;
-  border-color: var(--blue);
+  border-color: var(--blue-text);
 }
 .linkedin-content {
   white-space: pre-wrap;
@@ -327,7 +333,7 @@ footer {
   border-top: 1px solid var(--gray-200);
   margin-top: 3rem;
 }
-footer a { color: var(--blue); text-decoration: none; }
+footer a { color: var(--blue-text); text-decoration: none; }
 footer a:hover { text-decoration: underline; }
 .footer-credit {
   margin-top: .5rem;
@@ -365,7 +371,7 @@ footer a:hover { text-decoration: underline; }
   text-decoration: none;
 }
 .author-name-link:hover {
-  color: var(--blue);
+  color: var(--blue-text);
 }
 .author-headline {
   font-size: .9rem;
@@ -430,7 +436,7 @@ footer a:hover { text-decoration: underline; }
 .submit-btn {
   width: 100%;
   padding: .8rem;
-  background: var(--blue);
+  background: var(--blue-text);  /* blanc sur --blue plafonnait a 4.47:1 */
   color: white;
   border: none;
   border-radius: 8px;
@@ -454,12 +460,12 @@ footer a:hover { text-decoration: underline; }
   width: 60px; height: 60px;
   border-radius: 50%;
   background: #D1FAE5;
-  color: var(--green);
+  color: var(--green-text);
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
-.form-success h3 { color: var(--green); margin-bottom: .5rem; }
+.form-success h3 { color: var(--green-text); margin-bottom: .5rem; }
 .form-success p { color: var(--gray-500); }
 
 /* ═══ DARK MODE TOGGLE ═══ */
@@ -493,9 +499,12 @@ footer a:hover { text-decoration: underline; }
   background: rgba(255,255,255,.1);
   border: 1px solid rgba(255,255,255,.25);
   border-radius: 50%;
-  width: 42px;
-  height: 42px;
-  font-size: 1.2rem;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
   cursor: pointer;
   transition: all .3s;
   backdrop-filter: blur(4px);
@@ -521,6 +530,10 @@ body.dark {
   --gray-900: #F8FAFC;
   --shadow: 0 1px 3px rgba(0,0,0,.3), 0 6px 16px rgba(0,0,0,.2);
   --shadow-lg: 0 8px 30px rgba(0,0,0,.4);
+  /* Les jetons de texte s'eclaircissent : sur #1E293B, indigo-300 donne
+     7.34:1 et cyan-300 10.09:1. Les fonds portant du blanc restent fonces. */
+  --blue-text: #A5B4FC;
+  --green-text: #67E8F9;
   background: #0F172A;
   color: #E2E8F0;
 }
@@ -532,17 +545,17 @@ body.dark .tabs {
   background: #1E293B;
   border-bottom-color: #334155;
 }
-body.dark .tab { color: #94A3B8; }
-body.dark .tab.active { color: var(--blue); }
+body.dark .tab { color: #CBD5E1; }  /* #94A3B8 plafonnait a 4.38:1 sur #1E293B */
+body.dark .tab.active { color: var(--blue-text); border-bottom-color: var(--blue-text); }
 body.dark table th { background: #1E293B; color: #94A3B8; border-bottom-color: #334155; }
 body.dark table td { border-bottom-color: #334155; }
 body.dark tr:hover td { background: #334155; }
-body.dark .callout { background: linear-gradient(135deg, #1E1B4B33, #134E4A33); }
+body.dark .callout { background: #1E1B4B; border-color: #312E81; }
 body.dark .org-tag { background: #334155; border-color: #475569; color: #CBD5E1; }
-body.dark .org-tag:hover { background: #4338CA33; border-color: var(--blue); color: var(--blue); }
+body.dark .org-tag:hover { background: #4338CA33; border-color: var(--blue-text); color: var(--blue-text); }
 body.dark .form-group input,
 body.dark .form-group textarea { background: #334155; border-color: #475569; color: #E2E8F0; }
-body.dark .submit-btn { background: var(--blue); }
+body.dark .submit-btn { background: var(--blue-text); color: #0F172A; }
 body.dark footer { border-top-color: #334155; }
 body.dark .org-search { background: #334155; border-color: #475569; color: #E2E8F0; }
 body.dark .carousel-slide { background: #1E293B; border-color: #334155; }
@@ -650,12 +663,12 @@ body.dark .carousel-slide { background: #1E293B; border-color: #334155; }
   padding: 1rem 1.25rem;
   background: var(--gray-50);
   border-radius: 10px;
-  border-left: 3px solid var(--blue);
-  transition: all .2s;
+  border: 1px solid var(--gray-200);
+  transition: border-color .2s, box-shadow .2s;
 }
 .dict-item:hover {
-  border-left-color: var(--accent);
-  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  border-color: var(--blue-text);
+  box-shadow: 0 1px 2px rgba(15,23,42,.06), 0 4px 12px rgba(15,23,42,.05);
 }
 .dict-label {
   font-weight: 700;
@@ -682,7 +695,8 @@ body.dark .carousel-slide { background: #1E293B; border-color: #334155; }
 .status-dot.dev { background: var(--orange); }
 .status-dot.na { background: var(--gray-300); }
 
-body.dark .dict-item { background: #334155; }
+body.dark .dict-item { background: #334155; border-color: #475569; }
+body.dark .dict-desc { color: #CBD5E1; }  /* --gray-500 tombait a 4.0:1 sur #334155 */
 body.dark .dict-item:hover { box-shadow: 0 2px 8px rgba(0,0,0,.2); }
 
 /* ═══ FOOTER UPDATED ═══ */
@@ -703,4 +717,43 @@ body.dark .dict-item:hover { box-shadow: 0 2px 8px rgba(0,0,0,.2); }
   .chart-wrap { min-height: 260px; }
   .chart-tall { min-height: 350px; }
   .chart-xtall { min-height: 450px; }
+}
+
+
+/* ═══ SURFACES DU NAVIGATEUR ═══ */
+::selection { background: #C7D2FE; color: #1E1B4B; }
+body.dark ::selection { background: #4338CA; color: #EEF2FF; }
+
+:where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--blue-text);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.tabs, .table-wrap, .org-list {
+  scrollbar-width: thin;
+  scrollbar-color: var(--gray-300) transparent;
+}
+body.dark .tabs,
+body.dark .table-wrap,
+body.dark .org-list { scrollbar-color: #475569 transparent; }
+
+/* Les colonnes de chiffres s'alignent verticalement : comparer une colonne
+   de nombres est la tache principale de ce tableau de bord. */
+table td, .kpi-value, .up, .down { font-variant-numeric: tabular-nums; }
+
+/* Les liens poses dans le texte suivent le jeton de texte, qui s'inverse avec
+   le theme. Enumerer les conteneurs laissait toujours un lien en arriere :
+   la regle vise donc tout lien du contenu, sauf ceux qui portent leur propre
+   habillage (onglets, boutons, badges, cartes d'organisme). */
+main a:not(.tab):not(.btn):not(.linkedin-badge):not(.linkedin-link):not(.org-tag):not(.copy-btn),
+footer a { color: var(--blue-text); }
+main a:not(.tab):not(.btn):not(.linkedin-badge):not(.linkedin-link):not(.org-tag):not(.copy-btn):hover,
+footer a:hover { text-decoration: underline; }
+
+/* LinkedIn garde sa couleur de marque en clair. En sombre, #0A66C2 tombe a
+   2.6:1 : on prend le bleu que LinkedIn utilise lui-meme sur fond sombre. */
+body.dark .linkedin-link { color: #70B5F9; }
+body.dark .linkedin-link img {
+  filter: brightness(0) saturate(100%) invert(72%) sepia(41%) saturate(1004%) hue-rotate(178deg) brightness(101%) contrast(96%);
 }

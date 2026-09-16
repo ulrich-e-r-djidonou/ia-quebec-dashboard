@@ -19,7 +19,7 @@
   <div class="hero-inner">
     <div class="hero-badge">Données Québec &middot; CC-BY 4.0</div>
     <a href="../" class="lang-toggle" title="Version française">FR</a>
-    <button class="dark-toggle" id="darkToggle" title="Dark mode">🌙</button>
+    <button class="dark-toggle" id="darkToggle" type="button" aria-pressed="false" aria-label="Switch to dark mode"><svg class="icone-theme" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button>
     <h1>AI in Quebec's Public Administration</h1>
     <p class="hero-sub">Comparative Portrait <strong>2024 vs 2025</strong> — Interactive Open Data Analysis</p>
     <div class="kpi-row">
@@ -45,12 +45,12 @@
 
 <!-- ═══ NAV ═══ -->
 <nav class="tabs" id="tabs">
-  <button class="tab active" data-section="methodologie">Methodology</button>
-  <button class="tab" data-section="overview">Overview</button>
+  <button class="tab active" data-section="overview">Overview</button>
   <button class="tab" data-section="categories">Categories</button>
   <button class="tab" data-section="organismes">Organizations</button>
   <button class="tab" data-section="maturite">Maturity</button>
   <button class="tab" data-section="portefeuilles">Portfolios</button>
+  <button class="tab" data-section="methodologie">Methodology</button>
   <button class="tab" data-section="contact">Contact</button>
 </nav>
 
@@ -58,7 +58,7 @@
 <main>
 
   <!-- ── VUE D'ENSEMBLE ── -->
-  <section id="methodologie" class="section active">
+  <section id="methodologie" class="section">
     <div class="section-header">
       <h2>Methodology &amp; Data Dictionary</h2>
       <p>Understanding the data from the Public Portrait of AI in Quebec's Public Administration</p>
@@ -154,7 +154,7 @@
   </section>
 
   <!-- ── CONTACT ── -->
-  <section id="overview" class="section">
+  <section id="overview" class="section active">
     <div class="section-header">
       <h2>Overview</h2>
       <p>Global comparison of AI adoption between 2024 and 2025</p>
