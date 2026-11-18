@@ -56,13 +56,13 @@ function tooltipConfig() {
 new Chart(document.getElementById('chartTotal'), {
   type: 'bar',
   data: {
-    labels: ['2024', '2025'],
+    labels: ['2024', '2025', '2026'],
     datasets: [{
-      data: [DATA.total.y2024, DATA.total.y2025],
-      backgroundColor: [BLUE, ORANGE],
+      data: [DATA.total.y2024, DATA.total.y2025, DATA.total.y2026],
+      backgroundColor: [BLUE, ORANGE, GREEN],
       borderRadius: 8,
       borderSkipped: false,
-      barThickness: 80
+      maxBarThickness: 80
     }]
   },
   options: {
@@ -81,7 +81,7 @@ new Chart(document.getElementById('chartTotal'), {
     scales: {
       y: {
         beginAtZero: true,
-        max: 310,
+        suggestedMax: 490,
         grid: { color: '#F3F4F6' },
         ticks: { font: { size: 12 } }
       },
@@ -95,13 +95,13 @@ new Chart(document.getElementById('chartTotal'), {
 new Chart(document.getElementById('chartOrgs'), {
   type: 'bar',
   data: {
-    labels: ['2024', '2025'],
+    labels: ['2024', '2025', '2026'],
     datasets: [{
-      data: [DATA.organismes.y2024, DATA.organismes.y2025],
-      backgroundColor: [BLUE, ORANGE],
+      data: [DATA.organismes.y2024, DATA.organismes.y2025, DATA.organismes.y2026],
+      backgroundColor: [BLUE, ORANGE, GREEN],
       borderRadius: 8,
       borderSkipped: false,
-      barThickness: 80
+      maxBarThickness: 80
     }]
   },
   options: {
@@ -117,7 +117,7 @@ new Chart(document.getElementById('chartOrgs'), {
       }
     },
     scales: {
-      y: { beginAtZero: true, max: 100, grid: { color: '#F3F4F6' } },
+      y: { beginAtZero: true, suggestedMax: 180, grid: { color: '#F3F4F6' } },
       x: { grid: { display: false }, ticks: { font: { size: 14, weight: '600' } } }
     }
   },
@@ -263,10 +263,10 @@ makeDonut('chartStatut25', DATA.statuts.y2025, DATA.total.y2025);
 new Chart(document.getElementById('chartProdVsDev'), {
   type: 'bar',
   data: {
-    labels: ['2024', '2025'],
+    labels: ['2024', '2025', '2026'],
     datasets: [
-      { label: 'En production', data: [DATA.statuts.y2024[0], DATA.statuts.y2025[0]], backgroundColor: GREEN, borderRadius: 6, barPercentage: 0.6 },
-      { label: 'En développement', data: [DATA.statuts.y2024[1], DATA.statuts.y2025[1]], backgroundColor: ORANGE, borderRadius: 6, barPercentage: 0.6 },
+      { label: 'En production', data: [DATA.statuts.y2024[0], DATA.statuts.y2025[0], DATA.statuts.y2026[0]], backgroundColor: GREEN, borderRadius: 6, barPercentage: 0.6 },
+      { label: 'En développement', data: [DATA.statuts.y2024[1], DATA.statuts.y2025[1], DATA.statuts.y2026[1]], backgroundColor: ORANGE, borderRadius: 6, barPercentage: 0.6 },
     ]
   },
   options: {

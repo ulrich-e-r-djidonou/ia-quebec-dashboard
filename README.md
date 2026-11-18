@@ -1,39 +1,13 @@
-# Dashboard IA Quebec - 2024 vs 2025
+# L’IA dans l’administration publique québécoise
 
-Dashboard interactif analysant l'adoption de l'intelligence artificielle dans l'administration publique quebecoise.
+Le tableau de bord bilingue présente les initiatives déclarées de 2024 à 2026. Ouvrir `index.html` pour le français ou `en/index.html` pour l’anglais. Les graphiques utilisent Chart.js et son module d’étiquettes chargés par CDN. Les tableaux de la vue d’ensemble figurent dans le HTML.
 
-**[Voir le dashboard en ligne (FR)](https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/)** | **[View the dashboard (EN)](https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/en/)**
+## Mise à jour du 18 novembre 2026
 
----
+Le [portrait ministériel](https://www.quebec.ca/gouvernement/numerique/intelligence-artificielle-administration-publique/portrait) donne 168, 258 et 432 initiatives et 65, 83 et 157 organismes pour 2024, 2025 et 2026. La date de référence est le 15 juin 2026. Les indicateurs de services aux citoyens proviennent de cette même synthèse.
 
-## Chiffres cles
+Le [CSV officiel de 2026](https://www.donneesquebec.ca/recherche/dataset/1c9131d2-ab2a-4513-9a46-945b2bc96e1b/resource/302dc7b6-f1c5-48bb-b05b-7b45ed964b2d/download/portrait_public_utilisations_ia_gouvernement_quebec_2026.csv) contient 432 lignes et autant de numéros distincts. Pour reproduire les répartitions dans PowerShell après téléchargement, utiliser `$d = Import-Csv portrait.csv`, puis `$d | Group-Object Categorie`. Remplacer `Categorie` par `Statut`, `Portefeuille` ou `Organismes_publics` selon le tableau. Normaliser les espaces avant regroupement. Empreinte SHA-256 du fichier utilisé : `ac8f0567ff185f38b9158357d1bd8e86534843f7b273dfda4cbca663d0039eb5`.
 
-| Indicateur | 2024 | 2025 | Variation |
-|---|---|---|---|
-| Projets IA | 168 | 258 | **+54%** |
-| Organismes impliques | 65 | 82 | **+26%** |
-| Nouveaux organismes | - | 58 | - |
-| Projets en production | 82 | 132 | **+61%** |
-| Agents conversationnels | 37 | 68 | **+84%** |
+Le fichier compte 311 initiatives en production ou en exploitation et 121 en développement. Pour les autres usages et la traduction, le CSV donne 32 et 24, contre 31 et 25 dans la synthèse. Le tableau de bord reprend le CSV. Le classement des usages de 2026 est présenté séparément de celui de 2024 et 2025. Les variations des totaux mesurent l’évolution des déclarations et ne permettent pas de dénombrer les nouveaux entrants.
 
-## Fonctionnalites
-
-- **Vue d'ensemble** : KPIs animes, graphiques comparatifs, tableau recapitulatif
-- **Categories d'IA** : Repartition et evolution par type de projet (aide a la decision, automatisation, IA conversationnelle, imagerie medicale...)
-- **Organismes** : Top 10 des acteurs les plus actifs, liste des 58 nouveaux entrants, analyse sectorielle
-- **Maturite** : Production vs developpement, evolution du taux de deploiement
-- **Portefeuilles ministeriels** : Comparaison par ministere
-
-## Stack technique
-
-- HTML / CSS / JavaScript (vanilla)
-- [Chart.js](https://www.chartjs.org/) + [chartjs-plugin-datalabels](https://chartjs-plugin-datalabels.netlify.app/)
-- Heberge sur GitHub Pages
-
-## Source des donnees
-
-[Portrait public des utilisations de l'IA dans l'administration publique quebecoise](https://www.donneesquebec.ca/recherche/dataset/portrait-public-des-utilisations-de-l-ia-dans-l-administration-publique-quebecoise) — Donnees Quebec, licence CC-BY 4.0.
-
-## Auteur
-
-**Ulrich Djidonou** — Analyse et visualisation realisees avec **Claude Code** (Anthropic).
+[Site français](https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/) · [English site](https://ulrich-e-r-djidonou.github.io/ia-quebec-dashboard/en/). Données Québec, CC BY 4.0. Ulrich Djidonou.
