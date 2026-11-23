@@ -56,13 +56,13 @@ function tooltipConfig() {
 new Chart(document.getElementById('chartTotal'), {
   type: 'bar',
   data: {
-    labels: ['2024', '2025'],
+    labels: ['2024', '2025', '2026'],
     datasets: [{
-      data: [DATA.total.y2024, DATA.total.y2025],
-      backgroundColor: [BLUE, ORANGE],
+      data: [DATA.total.y2024, DATA.total.y2025, DATA.total.y2026],
+      backgroundColor: [BLUE, ORANGE, GREEN],
       borderRadius: 8,
       borderSkipped: false,
-      barThickness: 80
+      maxBarThickness: 80
     }]
   },
   options: {
@@ -81,7 +81,7 @@ new Chart(document.getElementById('chartTotal'), {
     scales: {
       y: {
         beginAtZero: true,
-        max: 310,
+        suggestedMax: 490,
         grid: { color: '#F3F4F6' },
         ticks: { font: { size: 12 } }
       },
@@ -95,13 +95,13 @@ new Chart(document.getElementById('chartTotal'), {
 new Chart(document.getElementById('chartOrgs'), {
   type: 'bar',
   data: {
-    labels: ['2024', '2025'],
+    labels: ['2024', '2025', '2026'],
     datasets: [{
-      data: [DATA.organismes.y2024, DATA.organismes.y2025],
-      backgroundColor: [BLUE, ORANGE],
+      data: [DATA.organismes.y2024, DATA.organismes.y2025, DATA.organismes.y2026],
+      backgroundColor: [BLUE, ORANGE, GREEN],
       borderRadius: 8,
       borderSkipped: false,
-      barThickness: 80
+      maxBarThickness: 80
     }]
   },
   options: {
@@ -117,7 +117,7 @@ new Chart(document.getElementById('chartOrgs'), {
       }
     },
     scales: {
-      y: { beginAtZero: true, max: 100, grid: { color: '#F3F4F6' } },
+      y: { beginAtZero: true, suggestedMax: 180, grid: { color: '#F3F4F6' } },
       x: { grid: { display: false }, ticks: { font: { size: 14, weight: '600' } } }
     }
   },
@@ -263,10 +263,10 @@ makeDonut('chartStatut25', DATA.statuts.y2025, DATA.total.y2025);
 new Chart(document.getElementById('chartProdVsDev'), {
   type: 'bar',
   data: {
-    labels: ['2024', '2025'],
+    labels: ['2024', '2025', '2026'],
     datasets: [
-      { label: 'In Production', data: [DATA.statuts.y2024[0], DATA.statuts.y2025[0]], backgroundColor: GREEN, borderRadius: 6, barPercentage: 0.6 },
-      { label: 'In Development', data: [DATA.statuts.y2024[1], DATA.statuts.y2025[1]], backgroundColor: ORANGE, borderRadius: 6, barPercentage: 0.6 },
+      { label: 'In Production', data: [DATA.statuts.y2024[0], DATA.statuts.y2025[0], DATA.statuts.y2026[0]], backgroundColor: GREEN, borderRadius: 6, barPercentage: 0.6 },
+      { label: 'In Development', data: [DATA.statuts.y2024[1], DATA.statuts.y2025[1], DATA.statuts.y2026[1]], backgroundColor: ORANGE, borderRadius: 6, barPercentage: 0.6 },
     ]
   },
   options: {
@@ -407,12 +407,16 @@ const darkToggle = document.getElementById('darkToggle');
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'dark') {
   document.body.classList.add('dark');
-  darkToggle.textContent = '☀️';
+  darkToggle.innerHTML = `<svg class="icone-theme" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>`;
+  darkToggle.setAttribute('aria-pressed', 'true');
+  darkToggle.setAttribute('aria-label', 'Switch to light mode');
 }
 darkToggle.addEventListener('click', () => {
   document.body.classList.toggle('dark');
   const isDark = document.body.classList.contains('dark');
-  darkToggle.textContent = isDark ? '☀️' : '🌙';
+  darkToggle.innerHTML = isDark ? `<svg class="icone-theme" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>` : `<svg class="icone-theme" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>`;
+  darkToggle.setAttribute('aria-pressed', String(isDark));
+  darkToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
 

@@ -709,11 +709,14 @@ body.dark .dict-item:hover { box-shadow: 0 2px 8px rgba(0,0,0,.2); }
 /* ═══ RESPONSIVE ═══ */
 @media (max-width: 768px) {
   .hero { padding: 2rem 1rem 1.5rem; }
-  .kpi-row { gap: .6rem; }
+  .hero-inner { padding-top: 3.25rem; }
+  .lang-toggle, .dark-toggle { top: 0; }
+  .kpi-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
   .kpi { min-width: 130px; padding: .75rem 1rem; }
   .kpi-value { font-size: 1.5rem; }
   main { padding: 1rem; }
-  .grid-2 { grid-template-columns: 1fr; }
+  .grid-2 { grid-template-columns: minmax(0, 1fr); }
+  .chart-wrap canvas { max-width: 100%; }
   .chart-wrap { min-height: 260px; }
   .chart-tall { min-height: 350px; }
   .chart-xtall { min-height: 450px; }

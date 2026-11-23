@@ -3,8 +3,8 @@
 // Names harmonized according to the correspondence file
 
 const DATA = {
-  total: { y2024: 168, y2025: 258 },
-  organismes: { y2024: 65, y2025: 82 },
+  total: { y2024: 168, y2025: 258, y2026: 432 },
+  organismes: { y2024: 65, y2025: 83, y2026: 157 },
 
   categories: {
     labels: ["Decision Support, Planning and/or Prediction", "Behavior/Sentiment Analysis", "Conversational Assistant/Agent", "Automation", "User Experience - Personalization", "AI-Assisted Training and Learning", "Geomatics and Geospatial Management", "Laboratory and Equipment", "Connected Electronic Systems and Ambient Intelligence", "Image Processing/Medical Imaging"],
@@ -15,7 +15,8 @@ const DATA = {
   statuts: {
     labels: ["Solution in Production", "Solution Development", "Information Unavailable"],
     y2024: [82, 81, 5],
-    y2025: [132, 115, 11]
+    y2025: [132, 115, 11],
+    y2026: [311, 121, 0]
   },
 
   topOrganismes2025: {
